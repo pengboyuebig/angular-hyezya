@@ -106,6 +106,21 @@
         <template #suffix>%</template>
       </a-statistic>
     </a-space>
+    <br />
+    <a-statistic
+      title="User Growth Rate"
+      :value="50.52"
+      :precision="2"
+      :value-from="0"
+      :start="start"
+      animation
+    >
+      <template #prefix>
+        <icon-arrow-rise />
+      </template>
+      <template #suffix>%</template>
+    </a-statistic>
+    <a-button @click="start = true">Start</a-button>
   </div>
 </template>
 <script>
@@ -136,9 +151,10 @@ export default {
       star.value = !star.value;
     };
     const align = ref(false);
-
+    const start = ref(false);
     return {
       // align
+      start
       like,
       star,
       onLikeChange,
