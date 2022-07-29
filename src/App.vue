@@ -153,8 +153,8 @@ export default {
     const align = ref(false);
     const start = ref(false);
     return {
-      // align
-      start
+      // align,
+      start,
       like,
       star,
       onLikeChange,
